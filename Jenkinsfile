@@ -18,7 +18,7 @@ pipeline {
             steps{
             withCredentials([string(credentialsId: 'docker_pwd', variable: 'docker_pwd')]) {
                    sh 'docker login -u ashokit -p ${docker_pwd}'
-                   sh 'docker push ashokit/contact_ui_app'
+                   sh 'docker push ashokit/uiapp'
             }
             }
         }
